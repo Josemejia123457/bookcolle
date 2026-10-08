@@ -1,0 +1,475 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookVerse | Tu mundo de libros</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <a href="#" class="logo">📚 BookVerse</a>
+
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#libros">Libros</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+
+        <a href="#libros" class="header-button">Explorar libros</a>
+    </header>
+
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+                <span class="tag">TU PRÓXIMA HISTORIA COMIENZA AQUÍ</span>
+
+                <h1>
+                    Entre páginas,<br>
+                    <span>mil mundos</span> por descubrir.
+                </h1>
+
+                <p>
+                    Encuentra historias que te hagan soñar,
+                    personajes que te enamoren y mundos
+                    de los que nunca quieras salir.
+                </p>
+
+                <a href="#libros" class="primary-button">
+                    Descubrir libros →
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=85"
+                    alt="Libros apilados"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- BUSCADOR -->
+        <section class="search-section">
+            <h2>¿Qué historia buscas hoy?</h2>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Busca por título o autor..."
+                    aria-label="Buscar libros"
+                >
+
+                <button type="button" id="searchButton">
+                    Buscar
+                </button>
+            </div>
+        </section>
+
+
+        <!-- CATEGORÍAS -->
+        <section class="categories section" id="categorias">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">EXPLORA TU ESTILO</span>
+                    <h2>Encuentra tu género favorito</h2>
+                </div>
+            </div>
+
+            <div class="category-list">
+
+                <button class="category active" data-category="Todos">
+                    ✨ Todos
+                </button>
+
+                <button class="category" data-category="Romance">
+                    💗 Romance
+                </button>
+
+                <button class="category" data-category="Fantasía">
+                    🪄 Fantasía
+                </button>
+
+                <button class="category" data-category="Misterio">
+                    🔎 Misterio
+                </button>
+
+                <button class="category" data-category="Drama">
+                    🌙 Drama
+                </button>
+
+                <button class="category" data-category="Clásicos">
+                    🕯️ Clásicos
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGO DE LIBROS -->
+        <section class="books section" id="libros">
+
+            <div class="section-heading">
+                <div>
+                    <span class="tag">NUESTRA BIBLIOTECA</span>
+                    <h2>Historias para enamorarte</h2>
+                </div>
+
+                <p id="resultsCount">6 libros disponibles</p>
+            </div>
+
+
+            <div class="book-grid" id="bookGrid">
+
+                <!-- LIBRO 1 -->
+                <article class="book-card"
+                    data-title="Orgullo y prejuicio"
+                    data-author="Jane Austen"
+                    data-category="Romance Clásicos">
+
+                    <div class="book-cover">
+                        <img
+                            src="https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
+                            alt="Portada de Orgullo y prejuicio"
+                            loading="lazy"
+                        >
+
+                        <span class="book-badge">Clásico</span>
+                    </div>
+
+                    <div class="book-info">
+                        <span class="book-category">ROMANCE · CLÁSICOS</span>
+                        <h3>Orgullo y prejuicio</h3>
+                        <p class="author">Jane Austen</p>
+
+                        <div class="book-footer">
+                            <span class="rating">★ 4.9</span>
+                            <button class="details-button"
+                                data-description="Una historia de amor, primeras impresiones y diferencias sociales en la Inglaterra del siglo XIX.">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 2 -->
+                <article class="book-card"
+                    data-title="El principito"
+                    data-author="Antoine de Saint-Exupéry"
+                    data-category="Fantasía Clásicos">
+
+                    <div class="book-cover">
+                        <img
+                            src="https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg"
+                            alt="Portada de El principito"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="book-info">
+                        <span class="book-category">FANTASÍA · CLÁSICOS</span>
+                        <h3>El principito</h3>
+                        <p class="author">Antoine de Saint-Exupéry</p>
+
+                        <div class="book-footer">
+                            <span class="rating">★ 4.9</span>
+                            <button class="details-button"
+                                data-description="Un pequeño viajero recorre distintos planetas y descubre valiosas lecciones sobre la amistad y la vida.">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 3 -->
+                <article class="book-card"
+                    data-title="Frankenstein"
+                    data-author="Mary Shelley"
+                    data-category="Misterio Clásicos">
+
+                    <div class="book-cover">
+                        <img
+                            src="https://covers.openlibrary.org/b/isbn/9780486282114-L.jpg"
+                            alt="Portada de Frankenstein"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="book-info">
+                        <span class="book-category">MISTERIO · CLÁSICOS</span>
+                        <h3>Frankenstein</h3>
+                        <p class="author">Mary Shelley</p>
+
+                        <div class="book-footer">
+                            <span class="rating">★ 4.7</span>
+                            <button class="details-button"
+                                data-description="Una novela gótica que explora la ambición científica, la soledad y las responsabilidades de quien crea vida.">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 4 -->
+                <article class="book-card"
+                    data-title="Romeo y Julieta"
+                    data-author="William Shakespeare"
+                    data-category="Romance Drama Clásicos">
+
+                    <div class="book-cover">
+                        <img
+                            src="https://covers.openlibrary.org/b/isbn/9780743477116-L.jpg"
+                            alt="Portada de Romeo y Julieta"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="book-info">
+                        <span class="book-category">ROMANCE · DRAMA</span>
+                        <h3>Romeo y Julieta</h3>
+                        <p class="author">William Shakespeare</p>
+
+                        <div class="book-footer">
+                            <span class="rating">★ 4.8</span>
+                            <button class="details-button"
+                                data-description="Dos jóvenes se enamoran a pesar de la rivalidad que separa a sus familias en una de las tragedias más famosas de la literatura.">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 5 -->
+                <article class="book-card"
+                    data-title="Drácula"
+                    data-author="Bram Stoker"
+                    data-category="Misterio Fantasía Clásicos">
+
+                    <div class="book-cover">
+                        <img
+                            src="https://covers.openlibrary.org/b/isbn/9780141439846-L.jpg"
+                            alt="Portada de Drácula"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="book-info">
+                        <span class="book-category">MISTERIO · FANTASÍA</span>
+                        <h3>Drácula</h3>
+                        <p class="author">Bram Stoker</p>
+
+                        <div class="book-footer">
+                            <span class="rating">★ 4.8</span>
+                            <button class="details-button"
+                                data-description="Una novela gótica que sigue el misterio y el terror que rodean al legendario conde Drácula.">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 6 -->
+                <article class="book-card"
+                    data-title="Mujercitas"
+                    data-author="Louisa May Alcott"
+                    data-category="Drama Clásicos">
+
+                    <div class="book-cover">
+                        <img
+                            src="https://covers.openlibrary.org/b/isbn/9780147514012-L.jpg"
+                            alt="Portada de Mujercitas"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="book-info">
+                        <span class="book-category">DRAMA · CLÁSICOS</span>
+                        <h3>Mujercitas</h3>
+                        <p class="author">Louisa May Alcott</p>
+
+                        <div class="book-footer">
+                            <span class="rating">★ 4.8</span>
+                            <button class="details-button"
+                                data-description="La vida de cuatro hermanas, sus sueños y los desafíos que enfrentan mientras crecen y descubren quiénes quieren ser.">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                No encontramos libros con esa búsqueda. Intenta con otro título.
+            </p>
+
+        </section>
+
+
+        <!-- SECCIÓN INFORMATIVA -->
+        <section class="about section" id="nosotros">
+
+            <div class="about-content">
+                <span class="tag">UN LUGAR PARA LECTORES</span>
+
+                <h2>Cada libro es una puerta a otro mundo.</h2>
+
+                <p>
+                    En BookVerse creemos que siempre existe una historia
+                    capaz de acompañarte, inspirarte y hacerte sentir
+                    algo extraordinario.
+                </p>
+
+                <a href="#libros" class="primary-button">
+                    Encuentra tu próxima lectura →
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- VENTANA DE DETALLES -->
+    <dialog id="bookDialog" class="book-dialog">
+        <button class="close-dialog" id="closeDialog"
+            aria-label="Cerrar ventana">×</button>
+
+        <span class="tag">DESCUBRE LA HISTORIA</span>
+        <h2 id="dialogTitle">Título del libro</h2>
+        <p id="dialogAuthor" class="author"></p>
+        <p id="dialogDescription"></p>
+    </dialog>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <a href="#inicio" class="logo">📚 BookVerse</a>
+
+        <p>Un libro, mil emociones. ♡</p>
+
+        <p class="copyright">
+            © 2026 BookVerse. Hecho con amor por los libros.
+        </p>
+    </footer>
+
+
+    <!-- FUNCIONALIDAD DEL BUSCADOR Y LAS CATEGORÍAS -->
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const categoryButtons = document.querySelectorAll(".category");
+        const bookCards = document.querySelectorAll(".book-card");
+        const resultsCount = document.getElementById("resultsCount");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        const bookDialog = document.getElementById("bookDialog");
+        const dialogTitle = document.getElementById("dialogTitle");
+        const dialogAuthor = document.getElementById("dialogAuthor");
+        const dialogDescription = document.getElementById("dialogDescription");
+
+        let selectedCategory = "Todos";
+
+        function filterBooks() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            let visibleBooks = 0;
+
+            bookCards.forEach(book => {
+                const title = book.dataset.title.toLowerCase();
+                const author = book.dataset.author.toLowerCase();
+                const categories = book.dataset.category.split(" ");
+
+                const matchesSearch =
+                    title.includes(searchTerm) ||
+                    author.includes(searchTerm);
+
+                const matchesCategory =
+                    selectedCategory === "Todos" ||
+                    categories.includes(selectedCategory);
+
+                const visible = matchesSearch && matchesCategory;
+
+                book.hidden = !visible;
+
+                if (visible) {
+                    visibleBooks++;
+                }
+            });
+
+            resultsCount.textContent =
+                `${visibleBooks} ${visibleBooks === 1 ? "libro disponible" : "libros disponibles"}`;
+
+            emptyMessage.hidden = visibleBooks !== 0;
+        }
+
+        searchButton.addEventListener("click", filterBooks);
+
+        searchInput.addEventListener("input", filterBooks);
+
+        categoryButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                categoryButtons.forEach(item =>
+                    item.classList.remove("active")
+                );
+
+                button.classList.add("active");
+                selectedCategory = button.dataset.category;
+
+                filterBooks();
+            });
+        });
+
+        document.querySelectorAll(".details-button").forEach(button => {
+            button.addEventListener("click", () => {
+                const card = button.closest(".book-card");
+
+                dialogTitle.textContent = card.dataset.title;
+                dialogAuthor.textContent = card.dataset.author;
+                dialogDescription.textContent = button.dataset.description;
+
+                bookDialog.showModal();
+            });
+        });
+
+        document.getElementById("closeDialog").addEventListener("click", () => {
+            bookDialog.close();
+        });
+
+        bookDialog.addEventListener("click", event => {
+            if (event.target === bookDialog) {
+                bookDialog.close();
+            }
+        });
+
+        filterBooks();
+    </script>
+
+</body>
+</html>
+```
